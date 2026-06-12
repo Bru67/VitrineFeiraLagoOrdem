@@ -11,7 +11,7 @@ import SwiftUI
 struct VitrineFeiraLagoOrdemApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            VitrineView()
         }
     }
 }
