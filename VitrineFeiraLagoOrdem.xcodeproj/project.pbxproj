@@ -32,21 +32,18 @@
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		44B4568D2FDC8CE80071850D /* VitrineFeiraLagoOrdem */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			name = VitrineFeiraLagoOrdem;
-			path = /Users/user282832/Desktop/VitrineFeiraLagoOrdem/VitrineFeiraLagoOrdem;
-			sourceTree = "<absolute>";
+			path = VitrineFeiraLagoOrdem;
+			sourceTree = "<group>";
 		};
 		44B4569B2FDC8CEA0071850D /* VitrineFeiraLagoOrdemTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			name = VitrineFeiraLagoOrdemTests;
-			path = /Users/user282832/Desktop/VitrineFeiraLagoOrdem/VitrineFeiraLagoOrdemTests;
-			sourceTree = "<absolute>";
+			path = VitrineFeiraLagoOrdemTests;
+			sourceTree = "<group>";
 		};
 		44B456A52FDC8CEA0071850D /* VitrineFeiraLagoOrdemUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			name = VitrineFeiraLagoOrdemUITests;
-			path = /Users/user282832/Desktop/VitrineFeiraLagoOrdem/VitrineFeiraLagoOrdemUITests;
-			sourceTree = "<absolute>";
+			path = VitrineFeiraLagoOrdemUITests;
+			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
