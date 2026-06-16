@@ -10,15 +10,28 @@ import SwiftUI
 struct VitrineView: View {
     @State private var viewModel = VitrineViewModel()
 
-    // Grade adaptativa: o nº de colunas se ajusta ao iPhone/iPad.
-    private let colunas = [GridItem(.adaptive(minimum: 150), spacing: 16)]
-
     var body: some View {
+        TabView {
+            // Aba 1 — vitrine existente
+            vitrineTab
+                .tabItem {
+                    Label("Vitrine", systemImage: "storefront")
+                }
+
+            // Aba 2 — favoritos
+            FavoritosView(viewModel: viewModel)
+                .tabItem {
+                    Label("Favoritos", systemImage: "heart.fill")
+                }
+        }
+    }
+
+    private var vitrineTab: some View {
         @Bindable var viewModel = viewModel
 
-        NavigationStack {
+        return NavigationStack {
             ScrollView {
-                LazyVGrid(columns: colunas, spacing: 16) {
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: 150), spacing: 16)], spacing: 16) {
                     ForEach(viewModel.produtosFiltrados) { produto in
                         NavigationLink {
                             DetalhesProdutoView(produto: produto, viewModel: viewModel)
@@ -35,10 +48,7 @@ struct VitrineView: View {
                 .padding()
             }
             .navigationTitle("Feira do Largo da Ordem")
-            .searchable(
-                text: $viewModel.textoBusca,
-                prompt: "Buscar por nome ou categoria"
-            )
+            .searchable(text: $viewModel.textoBusca, prompt: "Buscar por nome ou categoria")
             .overlay {
                 if viewModel.produtosFiltrados.isEmpty {
                     ContentUnavailableView.search(text: viewModel.textoBusca)

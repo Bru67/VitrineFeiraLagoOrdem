@@ -10,6 +10,9 @@ import Foundation
 @Observable
 final class VitrineViewModel {
     var produtos: [ProdutoArtesanal]
+    var produtosFavoritos: [ProdutoArtesanal] {
+    produtos.filter { $0.isFavorito }
+}
     var textoBusca: String = ""
 
     init(produtos: [ProdutoArtesanal] = ProdutoArtesanal.exemplos) {
